@@ -91,7 +91,6 @@ class SSGDatasetGraph(data.Dataset):
         self.classNames, self.relationNames, data, selected_scans = \
             dataset_loading_3RScan(self.root, self.mconfig.selection, split)
 
-        print("I am this split", split)
         print(multi_rel_outputs)   
         
         # for multi relation output, we just remove off 'None' relationship
@@ -130,13 +129,7 @@ class SSGDatasetGraph(data.Dataset):
         print('')
         
         # compile json file
-        print("I am selected_scans", selected_scans)
-        print("\n\n")
-        print("I am sleected scans data", data)
         self.relationship_json, self.objs_json, self.scans = self.read_relationship_json(data, selected_scans)
-        print("I am self.relan", self.relationship_json)
-        print("\n\n")
-        print("I am objs json", self.objs_json)
         print('num of data:',len(self.scans))
         assert(len(self.scans)>0)
             
@@ -234,13 +227,11 @@ class SSGDatasetGraph(data.Dataset):
                     To verify this, run check_seg.py
                     '''
                     continue
-            # # print("me is scan i scan", scan_i['scan'])
-            # if scan_i['scan'] not in selected_scans:
-            #     # print("does this gets printed?")
-            #     continue
+
+            if scan_i['scan'] not in selected_scans:
+                continue
                 
             relationships_i = []
-            print("scan i reln", scan_i["relationships"])
             for relationship in scan_i["relationships"]:
                 relationships_i.append(relationship)
                 
