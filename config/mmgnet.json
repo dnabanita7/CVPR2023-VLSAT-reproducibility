@@ -62,7 +62,7 @@
     "adapter_path":"clip_adapter/checkpoint/origin_mean.pth"
   },
   "dataset": {
-    "root": "data/3DSSG_subset",
+    "root": "data/3DSSG_subset/",
     "selection": "",
     "use_data_augmentation": false,
     "ignore_scannet_rel": true,

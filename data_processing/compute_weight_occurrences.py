@@ -11,7 +11,7 @@ def Parser():
     parser = argparse.ArgumentParser()
     parser.add_argument('--root', type=str, default='../data/example_data', help="rio path")
     parser.add_argument('--type', type=str, default='train', choices=['train', 'test', 'validation'], help="allow multiple rel pred outputs per pair",required=False)
-    parser.add_argument('--txt', type=str, default='"../data/train_scans.txt"', help="path to the txt file contain scan ids",required=False)
+    parser.add_argument('--txt', type=str, default='"../data/rescans.txt"', help="path to the txt file contain scan ids",required=False)
     return parser
 
 def compute_weights(labels, classes, count, verbose=False):

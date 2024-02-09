@@ -13,6 +13,7 @@ import argparse
 
 def main():
     config = load_config()
+    # print(config)
     os.environ["CUDA_LAUNCH_BLOCKING"] = "0"
     util.set_random_seed(config.SEED)
 
@@ -20,6 +21,7 @@ def main():
         print(config)
     
     model = MMGNet(config)
+    print(model.exp)
 
     save_path = os.path.join(config.PATH,'config', model.model_name, model.exp)
     os.makedirs(save_path, exist_ok=True)
