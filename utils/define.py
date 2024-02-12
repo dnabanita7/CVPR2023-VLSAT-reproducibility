@@ -1,4 +1,4 @@
-ROOT_PATH = 'CVPR2023-VLSAT/'
+ROOT_PATH = 'CVPR2023-VLSAT-reproducibility/'
 DATA_PATH = 'data/3RScan/data/3RScan/'
 # SCANNET_DATA_PATH = '/path/to/scannet' 
 # SCANNET_SPLIT_TRAIN = '/path/to/scannet/Tasks/Benchmarkscannetv2_train.txt'
